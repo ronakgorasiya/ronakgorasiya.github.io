@@ -469,6 +469,24 @@
                 </div>
             </section>
         </main>
+        
+        <!--==================== Instagram Feed ====================-->
+
+            <section class="about section" id="about">
+                <h2 class="section__title">Instagram Feed</h2>
+                <div id="instafeed-container"></div>
+
+                <script src="https://cdn.jsdelivr.net/gh/stevenschobert/instafeed.js@2.0.0rc1/src/instafeed.min.js"></script>
+                <script type="text/javascript">
+                var userFeed = new Instafeed({
+                    get: 'user',
+                    target: "instafeed-container",
+                    resolution: 'low_resolution',
+                    accessToken: 'IGQVJXalRUVGw5UmdmOEJ1UUFaMjJlaUxIalFubWhUSWw0cDJfSzA4LUprenBEMzNBMmtMSnRxNm14SXlFUGNSekthWVNyV2lPNFVGR1lxdHJ4U0d3dEdWN25hR2U3Q0Q1aUUzSUFOdm40S1l6RHlmeQZDZD'
+                });
+                userFeed.run();
+                </script>
+            </section>
 
         <!--==================== FOOTER ====================-->
         <footer class="footer">
