@@ -545,16 +545,16 @@
         <!--==================== MAIN JS ====================-->
         <script type="text/javascript" src="assets/js/main.js"></script>
         <script>
-            jQuery(window).on('load',function(){
-                jQuery(".show-img a img:lt(3)").show();
-                    jQuery("#gallery-btn").on('click', function(event) {
+           $(window).on('load',function(){
+                $(".show-img a img:lt(3)").show();
+                    $("#gallery-btn").on('click', function(event) {
                         event.preventDefault();
-                        var $hidden = jQuery(".show-img a img:hidden");
-                        jQuery($hidden).slice(0,$hidden.length).fadeIn(800);
+                        var $hidden = $(".show-img a img:hidden");
+                        $($hidden).slice(0,$hidden.length).fadeIn(800);
                         if($hidden.length == 4){
-                            jQuery(this).fadeOut();
+                            $(this).fadeOut();
                         }
-                        jQuery(this).hide();
+                        $(this).hide();
                     });
             });
         </script>
