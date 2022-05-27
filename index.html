@@ -400,6 +400,27 @@
                 </div>
             </section>
 
+            <!--==================== Instagram Feed ====================-->
+
+            <section class="about section" id="about">
+                <h2 class="section__title">Instagram Feed</h2>
+                <div class="about__container container">
+                <div class="show-img" id="instafeed-container"></div>
+                 <button type="button" class="btn-img btn-primary" id="gallery-btn">View More</button>
+                </div>
+
+                <script src="https://cdn.jsdelivr.net/gh/stevenschobert/instafeed.js@2.0.0rc1/src/instafeed.min.js"></script>
+                <script type="text/javascript">
+                var userFeed = new Instafeed({
+                    get: 'user',
+                    target: "instafeed-container",
+                    resolution: 'low_resolution',
+                    accessToken: 'IGQVJXalRUVGw5UmdmOEJ1UUFaMjJlaUxIalFubWhUSWw0cDJfSzA4LUprenBEMzNBMmtMSnRxNm14SXlFUGNSekthWVNyV2lPNFVGR1lxdHJ4U0d3dEdWN25hR2U3Q0Q1aUUzSUFOdm40S1l6RHlmeQZDZD'
+                });
+                userFeed.run();
+                </script>
+            </section>
+            
             <!--==================== CONTACT ME ====================-->
 
             <section class="contact section" id="contact">
@@ -470,25 +491,7 @@
             </section>
         </main>
         
-        <!--==================== Instagram Feed ====================-->
-
-            <section class="about section" id="about">
-                <h2 class="section__title"><a href="https://www.instagram.com/ronak_gorasiya/">Follow us on instagram</a></h2>
-                <div class="about__container container">
-                    <div id="instafeed-container"></div></div>
-
-                <script src="https://cdn.jsdelivr.net/gh/stevenschobert/instafeed.js@2.0.0rc1/src/instafeed.min.js"></script>
-                <script type="text/javascript">
-                var userFeed = new Instafeed({
-                    get: 'user',
-                    target: "instafeed-container",
-                    resolution: 'low_resolution',
-                    accessToken: 'IGQVJXalRUVGw5UmdmOEJ1UUFaMjJlaUxIalFubWhUSWw0cDJfSzA4LUprenBEMzNBMmtMSnRxNm14SXlFUGNSekthWVNyV2lPNFVGR1lxdHJ4U0d3dEdWN25hR2U3Q0Q1aUUzSUFOdm40S1l6RHlmeQZDZD'
-                });
-                userFeed.run();
-                </script>
-            </section>
-
+        
         <!--==================== FOOTER ====================-->
         <footer class="footer">
 
@@ -541,5 +544,20 @@
 
         <!--==================== MAIN JS ====================-->
         <script type="text/javascript" src="assets/js/main.js"></script>
+        <script>
+            jQuery(window).on('load',function(){
+                jQuery(".show-img a img:lt(3)").show();
+                    jQuery("#gallery-btn").on('click', function(event) {
+                        event.preventDefault();
+                        var $hidden = jQuery(".show-img a img:hidden");
+                        jQuery($hidden).slice(0,$hidden.length).fadeIn(800);
+                        if($hidden.length == 4){
+                            jQuery(this).fadeOut();
+                        }
+                        jQuery(this).hide();
+                    });
+            });
+        </script>
+        
     </body>
 </html>
