@@ -634,8 +634,10 @@ img{
             
         }
         .btn-img {
-          display: block;
+          display: flex;
           margin: 30px auto 0 auto;
+          width:150px;
+          justify-content:center;
         }
 
 /*==================== CONTACT ME ====================*/
