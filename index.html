@@ -8,6 +8,7 @@
         <!--==================== UNICONS ====================-->
         
         <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
         <!--==================== CSS ====================-->
         
@@ -545,16 +546,16 @@
         <!--==================== MAIN JS ====================-->
         <script type="text/javascript" src="assets/js/main.js"></script>
         <script>
-           $(window).on('load',function(){
-                $(".show-img a img:lt(3)").show();
-                    $("#gallery-btn").on('click', function(event) {
+           jQuery(window).on('load',function(){
+                jQuery(".show-img a img:lt(3)").show();
+                    jQuery("#gallery-btn").on('click', function(event) {
                         event.preventDefault();
-                        var $hidden = $(".show-img a img:hidden");
-                        $($hidden).slice(0,$hidden.length).fadeIn(800);
+                        var $hidden = jQuery(".show-img a img:hidden");
+                        jQuery($hidden).slice(0,$hidden.length).fadeIn(800);
                         if($hidden.length == 4){
-                            $(this).fadeOut();
+                            jQuery(this).fadeOut();
                         }
-                        $(this).hide();
+                        jQuery(this).hide();
                     });
             });
         </script>
