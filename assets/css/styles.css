@@ -607,6 +607,37 @@ img{
     color: var(--first-color);
 }
 
+/*==================== Instagram Feed ====================*/
+
+#instafeed-container a img{
+            width: 250px;
+            height: 250px;
+            object-fit: contain;
+            padding: 10px;
+        }
+        #instafeed-container a img{
+          margin-top: 20px;
+          display: none;
+          
+        }
+
+        #instafeed-container a:hover{
+            opacity: 0.4;
+        }
+
+        #instafeed-container a img{
+            &:after
+                 content: attr(title);
+            
+            &:hover:after
+                background: red;
+            
+        }
+        .btn-img {
+          display: block;
+          margin: 30px auto 0 auto;
+        }
+
 /*==================== CONTACT ME ====================*/
 
 .contact__container{
