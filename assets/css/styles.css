@@ -500,6 +500,10 @@ img{
     width: 90%;
 }
 
+.skills__tailwind{
+    width: 60%;
+}
+
 .skills__js{
     width: 40%;
 }
